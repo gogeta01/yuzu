@@ -458,6 +458,8 @@ struct Values {
     // Controls
     std::array<PlayerInput, 10> players;
 
+    bool use_docked_mode;
+
     bool mouse_enabled;
     std::string mouse_device;
     MouseButtonsRaw mouse_buttons;
@@ -471,13 +473,14 @@ struct Values {
     AnalogsRaw debug_pad_analogs;
 
     std::string motion_device;
+
+    bool vibration_enabled;
+
     TouchscreenInput touchscreen;
     std::atomic_bool is_device_reload_pending{true};
     std::string udp_input_address;
     u16 udp_input_port;
     u8 udp_pad_index;
-
-    bool use_docked_mode;
 
     // Data Storage
     bool use_virtual_sd;
